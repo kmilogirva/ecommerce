@@ -1,0 +1,84 @@
+<!-- <div class="mb-4">
+  <h2>Header Component with Sidebar</h2>
+  <p>This example demonstrates a header component integrated with a collapsible sidebar for navigation.</p>
+</div> -->
+
+<div class="c-container">
+  <!-- HEADER -->
+  <c-header class="shadow-sm bg-dark px-3 text-white">
+    <c-container fluid class="d-flex align-items-center justify-content-between">
+
+      <!-- Brand -->
+      <c-header-brand routerLink="/" class="fw-bold text-danger fs-4">
+        ECShop
+      </c-header-brand>
+
+      <!-- Navbar items -->
+      <c-header-nav class="d-none d-lg-flex gap-3">
+
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Buscar..."
+          [cAutocomplete]="searchOptions"
+          allowOnlyDefinedOptions
+          [(ngModel)]="searchText" />
+
+        <c-nav-item>
+          <a routerLink="/" cNavLink class="nav-link-custom text-light">Home</a>
+        </c-nav-item>
+
+        <c-nav-item>
+          <a routerLink="/components/alert" cNavLink class="nav-link-custom text-light">Link</a>
+        </c-nav-item>
+
+        <c-nav-item>
+          <a class="nav-link-custom text-secondary disabled">Disabled</a>
+        </c-nav-item>
+
+        <c-dropdown alignment="end">
+          <a cDropdownToggle cNavLink class="nav-link-custom text-light">Dropdown</a>
+          <ul cDropdownMenu class="bg-dark">
+            <li><a routerLink="" cDropdownItem class="text-light">Action</a></li>
+            <li><a routerLink="" cDropdownItem class="text-light">Another action</a></li>
+            <li>
+              <hr cDropdownDivider class="border-secondary">
+            </li>
+            <li><a routerLink="" cDropdownItem class="text-light">Something else</a></li>
+          </ul>
+        </c-dropdown>
+      </c-header-nav>
+
+      <!-- Mobile Sidebar Toggle -->
+      <button class="btn btn-outline-light d-lg-none" cSidebarToggler (click)="toggleSidebar()">
+        ☰
+      </button>
+    </c-container>
+
+    <c-header-divider class="bg-secondary opacity-50" />
+
+    <c-container fluid>
+      <c-header-text class="text-secondary small">
+        Additional text goes here
+      </c-header-text>
+    </c-container>
+  </c-header>
+
+
+  <!-- SIDEBAR -->
+  <!-- <c-sidebar #sidebar [visible]="sidebarVisible" [unfoldable]="!sidebarCollapsed" class="sidebar sidebar-dark bg-dark">
+
+    <c-sidebar-header class="border-bottom">
+      <c-sidebar-brand class="text-light">Menu</c-sidebar-brand>
+    </c-sidebar-header>
+
+    <c-sidebar-nav [navItems]="navItems"></c-sidebar-nav>
+
+    <c-sidebar-footer class="border-top text-center py-2">
+      <button cSidebarToggler (click)="toggleCollapse()" class="btn btn-secondary btn-sm">
+        Toggle
+      </button>
+    </c-sidebar-footer>
+  </c-sidebar> -->
+
+</div>
